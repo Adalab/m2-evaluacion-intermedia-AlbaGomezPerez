@@ -16,11 +16,13 @@ function random(max){
   
 
 function checking(){
+	// al contador le decimos que sume uno cada vez que hacemos click
 	cont = cont + 1; 
 	numCont.innerHTML=cont; 
 
-
+	// hacemos una variable (va a cambiar) sobre el número que introducde el usuario
 	let numberUser = inputFill.value; 
+	
 	// numero más alto
 	if(numberUser > randomNum){
 	textResult.innerHTML = 'Lo siento, tu número es demasiado alto'; 
