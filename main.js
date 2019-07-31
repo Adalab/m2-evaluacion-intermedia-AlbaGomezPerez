@@ -44,7 +44,7 @@ function checking(){
 		
 			// número acertado
 			textResult.innerHTML = 'Has ganado, campeona';
-			}
+		}
 	}
 }
 
