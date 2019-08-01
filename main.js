@@ -21,31 +21,35 @@ function random(max){
 function checking(){
 	// al contador le decimos que sume uno cada vez que hacemos click
 	count = count + 1; 
-	numCount.innerHTML= count; 
+	numCount.innerHTML = count; 
 	
 	// hacemos una variable (va a cambiar) sobre el número que introducde el usuario
 	let numberUser = parseInt(inputFill.value); 
-	if(numberUser > 100){
-		textResult.innerHTML = 'Tienes que elegir un número menor de 101';
-	}else{
-		if(numberUser < 0){
-			textResult.innerHTML = 'Tienes que elegir un número mayor de 0';
+	if(inputFill.value != ''){
+		if(numberUser > 100){
+			textResult.innerHTML = 'Tienes que elegir un número menor de 101';
 		}else{
-		// numero más alto
-			if(numberUser > randomNum){
-				textResult.innerHTML = 'Lo siento, tu número es demasiado alto'; 
+			if(numberUser < 0){
+				textResult.innerHTML = 'Tienes que elegir un número mayor de 0';
 			}else{
-				// numero mas bajo
-				if(numberUser < randomNum){
-					textResult.innerHTML = 'Lo siento, tu número es demasiado bajo'; 
-				}else if(numberUser === randomNum) {
-				
+			// numero más alto
+				if(numberUser > randomNum){
+					textResult.innerHTML = 'Lo siento, tu número es demasiado alto'; 
+				}else{
+					// numero mas bajo
+					if(numberUser < randomNum){
+						textResult.innerHTML = 'Lo siento, tu número es demasiado bajo'; 
+					}else if(numberUser === randomNum) {
 					
-					// número acertado
-					textResult.innerHTML = 'Has ganado, campeona';
+						
+						// número acertado
+						textResult.innerHTML = 'Has ganado, campeona';
+					}
 				}
 			}
 		}
+	}else{
+		textResult.innerHTML = 'Tienes que introducir algún número';
 	}
 }
 
