@@ -7,7 +7,7 @@ const numCount = document.querySelector('.cont');
 let randomNum = random(100);
 let count = 0; 
 const resetButton = document.querySelector('.reset'); 
-const resetKey = document.querySelector('body'); 
+ 
 
 
 // función número random
@@ -39,10 +39,7 @@ function checking(){
 				if(numberUser < randomNum){
 					textResult.innerHTML = 'Lo siento, tu número es demasiado bajo'; 
 				}else if(numberUser === randomNum) {
-					// número mayor de 100
-					// 	if(numberUser > 100){
-					// 	textResult.innerHTML = 'Recuerda, tienes que elegir un número menor de 100';
-					// }else{
+				
 					
 					// número acertado
 					textResult.innerHTML = 'Has ganado, campeona';
@@ -61,19 +58,25 @@ function reset(){
 }
 
 
+
+
 // evento (click)
 button.addEventListener('click', checking); 
 
 // evento (click reset)
 resetButton.addEventListener('click', reset); 
 
+// evento y dentro su función flecha (press enter)
+inputFill.addEventListener('keyup', event => {
+	if (event.keyCode === 13){
+		checking(); 	
+	}
+}); 
 
 
-// numero mayor de 100 
-// numero menor de 0 
-// parseInt 
+
+ 
 // input vacio 
-// boton reset
 // key??? 13
 
 
