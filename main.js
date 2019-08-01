@@ -28,25 +28,25 @@ function checking(){
 	if(numberUser > 100){
 		textResult.innerHTML = 'Tienes que elegir un número menor de 101';
 	}else{
-
-		// if(numberUser < 0){
-		// 	textResult.innerHTML = 'Tienes que elegir un número mayor de 0';
-		// }else{
-		// numero más alto
-		if(numberUser > randomNum){
-			textResult.innerHTML = 'Lo siento, tu número es demasiado alto'; 
+		if(numberUser < 0){
+			textResult.innerHTML = 'Tienes que elegir un número mayor de 0';
 		}else{
-			// numero mas bajo
-			if(numberUser < randomNum){
-				textResult.innerHTML = 'Lo siento, tu número es demasiado bajo'; 
-			}else if(numberUser === randomNum) {
-				// número mayor de 100
-				// 	if(numberUser > 100){
-				// 	textResult.innerHTML = 'Recuerda, tienes que elegir un número menor de 100';
-				// }else{
-				
-				// número acertado
-				textResult.innerHTML = 'Has ganado, campeona';
+		// numero más alto
+			if(numberUser > randomNum){
+				textResult.innerHTML = 'Lo siento, tu número es demasiado alto'; 
+			}else{
+				// numero mas bajo
+				if(numberUser < randomNum){
+					textResult.innerHTML = 'Lo siento, tu número es demasiado bajo'; 
+				}else if(numberUser === randomNum) {
+					// número mayor de 100
+					// 	if(numberUser > 100){
+					// 	textResult.innerHTML = 'Recuerda, tienes que elegir un número menor de 100';
+					// }else{
+					
+					// número acertado
+					textResult.innerHTML = 'Has ganado, campeona';
+				}
 			}
 		}
 	}
