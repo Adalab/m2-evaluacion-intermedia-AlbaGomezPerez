@@ -26,8 +26,12 @@ function checking(){
 	// hacemos una variable (va a cambiar) sobre el número que introducde el usuario
 	let numberUser = parseInt(inputFill.value); 
 	if(numberUser > 100){
-		textResult.innerHTML = 'cuidado';
+		textResult.innerHTML = 'Tienes que elegir un número menor de 101';
 	}else{
+
+		// if(numberUser < 0){
+		// 	textResult.innerHTML = 'Tienes que elegir un número mayor de 0';
+		// }else{
 		// numero más alto
 		if(numberUser > randomNum){
 			textResult.innerHTML = 'Lo siento, tu número es demasiado alto'; 
