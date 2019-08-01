@@ -43,7 +43,7 @@ function checking(){
 					
 						
 						// número acertado
-						textResult.innerHTML = 'Has ganado, campeona';
+						textResult.innerHTML = 'Tu clave es correcta, ¡Salvamos a la sirena!';
 					}
 				}
 			}
